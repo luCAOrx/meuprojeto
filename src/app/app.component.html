@@ -1,0 +1,22 @@
+<div class="container" style="margin-top: 30px;">
+
+  <div class="alert alert-success" role="alert">
+    Funcionário adicionado: <strong>{{nome}}</strong>
+  </div>
+
+  <div class="form-group">
+    <label>Nome:</label>
+    <input type="text"
+      class="form-control"
+      (input)="alteraNome($event)"
+      [value]="nome">
+  </div>
+
+  <button type="button"
+    class="btn btn-primary"
+    (click)="adiciona()"
+    [disabled]="isDisabled()">
+    <i class="fas fa-save"></i> Adicionar
+  </button>
+
+</div>
